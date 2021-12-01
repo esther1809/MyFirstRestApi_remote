@@ -5,7 +5,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const peopleRouter = require('./routes/peopleRoute');
-const peopleByNameRouter = require('./routes/peopleByNameRoute');
 
 /*
  * connect to db
@@ -30,7 +29,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(express.json());
 app.use('/api/people',peopleRouter);
-app.use('/api/peopleByName',peopleByNameRouter);
+
 /*
  * routes definitions
  */
